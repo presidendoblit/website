@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisai Keuangan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="site-header">
+    <div class="container nav">
+        <a href="index.html" class="brand" aria-label="CashClass beranda">
+            <img src="img/education.png" alt="" style="height: 30px;">
+            <span>CashClass</span>
+        </a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="primary-nav" id="menuBtn">Menu</button>
+        <nav id="primary-nav" class="nav-links" aria-label="Menu utama">
+            <a href="index.html">Beranda</a>
+            <a href="education.html">Edukasi</a>
+            <a href="visual.html" class="btn primary">Visual</a>
+            <a href="tips.html">Tips</a>
+            <a href="alternatif.html">Alternatif</a>
+        </nav>
+    </div> 
+</header>
+
+<main class="container">
+    <section class="features">
+        <h2>Viusalisai Anggaran</h2>
+        <p>Perbandingan alokasi keuangan berdasarkan metode 50/30/20</p>
+        <canvas id="budgetChart" style="max-height: 400px;"></canvas>
+    </section>
+
+    <section class="features">
+        <h2>Proyeksi Investasi</h2>
+        <p>Contoh pertumbuhan nilai investasi selama 5 tahun</p>
+        <canvas id="investChart" style="max-height: 400px;"></canvas>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="year"></span> Blitz. Dibuat untuk edukasi finansial</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+<script>
+
+        // menampilkan tahun otomatis
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+        // bagan anggaran
+    const ctx1 = document.getElementById('budgetChart');
+    new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: ['Kebutuhan (50%)', 'Keinginan (30%)', 'Tabungan/Investasi (20%)'],
+            datasets: [{
+                data: [50, 30, 20],
+                backgroundColor: ['#38bdf8', '#fbbf24', '#34d399']
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {position: 'bottom'}
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+            }
+        }
+    });
+
+        // perkembangan investasi
+    const ctx2 = document.getElementById('investChart');
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['Tahun 1', 'Tahun 2', 'Tahun 3', 'Tahun 4', 'Tahun 5'],
+            datasets: [{
+                label: 'Nilai Investasi',
+                data: ['2000000', '4000000', '6500000', '9500000', '13000000'],
+                borderColor: '#68e1fd',
+                backgroundColor: 'rgba(104,225,253,0.2)',
+                fill: true,
+                tension: 0.3,
+                pointBackgroundColor: '#68e1fd',
+                pointRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {position: 'bottom'}
+            },
+            animation: {
+                duration: 1200,
+                easing: 'easeOutQuart'
+            }
+        }
+    });
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Edukasi</title>
+    <meta name="description" content="Kalkulator anggaran,simulasi investasi, dan materi literasi keuangan">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a href="index.html" class="brand" aria-label="Kembali ke beranda">
+                <img src="img/education.png" alt="" style="height: 30px;">
+                <span>CashClass</span>
+            </a>
+            <button class="menu-btn" aria-expanded="false" aria-controls="primary-nav" id="menuBtn">Menu</button>
+            <nav id="primary-nav" class="nav-links" aria-label="Menu utama">
+                <a href="index.html">Beranda</a>
+                <a href="education.html" class="btn primary">Edukasi</a>
+                <a href="visual.html">Visual</a>
+                <a href="tips.html">Tips</a>
+                <a href="alternatif.html">Alternatif</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container edu">
+        <section class="notice">
+            <p><strong>Catatan:</strong>Contoh dan perhitungan bersifat edukatif, bukan nasihat uang pribadi.</p>
+        </section>
+
+        <section id="anggaran" class="card">
+            <h2>Perancangan Anggaran</h2>
+            <p>Mulai dari pendapatan bersih bulanan, lalu alokasilkan dengan metode 50/30/20: 50% kebutuhan, 30% keinginan, 20% tabungan/investasi.</p>
+            <form class="grid-2" id="budgetForm">
+                <label>Pendapatan Bulanan
+                    <input type="number" id="income" min="0" step="1000" placeholder="cth:5000000" required>
+                </label>
+                <label>Target Tabungan (%)
+                    <input type="number" id="savePct" min="0" max="100" step="1" value="20" required>
+                </label>
+                <div class="full">
+                    <button type="submit" class="btn primary">Hitung Alokasi</button>
+                    <button type="button" class="btn ghost" id="saveBudget">Simpan Rencana</button>
+                    <button type="button" class="btn ghost" id="clearBudget">Hapus Rencana</button>
+                </div>
+            </form>
+            <div id="budgetResult" class="result"></div>
+        </section>
+
+        <section id="investasi" class="card">
+            <h2>Simulasi Investasi (Bunga Berbunga)</h2>
+            <form class="grid-2" id="investForm">
+                <label>Modal awal
+                    <input type="number" id="principal" min="0" step="1000" placeholder="cth: 2000000"required>
+                </label>
+                <label>Kontribusi Bulanan
+                    <input type="number" id="monthly" min="0" step="1000" placeholder="cth: 500000"required>
+                </label>
+                <label>Suku Bunga Tahunan (%)
+                    <input type="number" id="rate" min="0" step="0.1" placeholder="cth: 8"required>
+                </label>
+                <label>Lama Investai (tahun)
+                    <input type="number" id="years" min="1" max="50" step="1" value="5" required>
+                </label>
+                <div class="full">
+                    <button type="submit" class="btn primary">Nilai Hitung Akhir</button>
+                </div>
+            </form>
+            <div id="investResult" class="result"></div>
+        </section>
+
+        <section id="pengelolaan" class="card">
+            <h2>Pengelolaan Keuangan Pribadi</h2>
+            <p>Catat pengeluaran rutin untuk memantau arus kas</p>
+            <form class="grid-2" id="expenseForm">
+                <label>Kategori
+                    <input type="text" id="expCat" placeholder="cth: makan, Transport">
+                </label>
+                <label>Nominal
+                    <input type="number" id="expAmt" min="0" step="1000" placeholder="cth: 25000">
+                </label>
+                <div class="full">
+                    <button type="submit" class="btn primary">Tambah</button>
+                    <button type="button" class="btn ghost" id="resetExp">Reset</button>
+                </div>
+            </form>
+            <div id="expenseList" class="table"></div>
+        </section>
+
+        <section id="glosarium" class="card">
+            <h2>Glosarium singkat</h2>
+            <details>
+                <summary>Darurat Fund</summary>
+                <p>Tabungan cadangan untuk kebutuhan darurat, idealnya 3-6 bulan biaya hidup</p>
+            </details>
+            <details>
+                <summary>Inflasi</summary>
+                <p>Kenaikan harga barang/jasa secara umum, menurunkan daya beli uang dari waktu ke waktu</p>
+            </details>
+            <details>
+                <summary>Risiko</summary>
+                <p>Potensi hasil tidak sesuai harapan; pahami profil risiko sebelum berinvestasi</p>
+            </details>
+        </section>
+
+        <section class="cta container" style="margin-top: 20px;">
+        <div class="cta-card">
+            <h2>Siap Memulai Perjalanan Finansialmu?</h2>
+            <p>masuk ke halaman edukasi untuk mencoba kalkulator dan materi interaktif.</p>
+            <a class="btn primary" href="alternatif.html">Buka Halaman Edukasi</a>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span>Blitz. Untuk tujuan edukasi</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

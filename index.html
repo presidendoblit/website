@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literasi Keuangan</title>
+    <meta name="description" content="Edukasi finansial praktis: perancangan anggaran, investasi, dan pengelolaan keuangan pribadi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=inter:wght@400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container nav">
+        <a href="index.html" class="brand" aria-label="CashClass beranda">
+            <img src="img/education.png" alt="" style="height: 30px;">
+            <span>CashClass</span>
+        </a>
+        <button class="menu-btn" aria-expanded="false" aria-controls="primary-nav" id="menuBtn">Menu</button>
+        <nav id="primary-nav" class="nav-links" aria-label="Menu utama">
+            <a href="index.html" class="btn primary">Beranda</a>
+            <a href="education.html">Edukasi</a>
+            <a href="visual.html">Visual</a>
+            <a href="tips.html">Tips</a>
+            <a href="alternatif.html">Alternatif</a>
+        </nav>
+    </div> 
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1>Edukasi Finansial yang <span class="accent">Sederhana</span> &amp; <span class="accent">Bermanfaat</span></h1>
+                <p>Pelajari perencanaan anggaran, investasi,dan cara mengelola data keuangan pribadi dengan alat interaktif dan panduan ringkas</p>
+                <div class="action">
+                    <a class="btn primary" href="education.html">Mulai Belajar</a>
+                    <a class="btn ghost" href="#fitur">Fitur</a>
+                </div>
+                <ul class="badges">
+                    <li>🎯 Praktis</li>
+                    <li>📱 Responsif</li>
+                    <li>🧮 Kalkulator</li>
+                </ul>
+            </div>
+            <div class="hero-card" role="img" aria-label="Ilustrasi pertumbuhan keuangan">
+                <div class="stat">
+                    <span class="label">Target Tabungan</span>
+                    <span class="value" id="demoTarget">Rp 10.000.000</span>
+                </div>
+            <div class="progress">
+                <div class="bar" style="width: 35%;" id="demoBar"></div>
+            </div>
+            <p class="muted">Progres Target Tabungan 35%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fitur" class="features container">
+        <h2 style="margin-top: 15px;">Belajar Dengan Alat Yang Tepat</h2>
+        <div class="grid-3">
+            <article class="card">
+                <div class="icon">💸</div>
+                <h3>Perancangan Anggaran</h3>
+                <p>Gunakan metode 50/30/20 atau buat dengan kategori sendiri.</p>
+            </article>
+            <article class="card">
+                <div class="icon">📈</div>
+                <h3>Simulasi Investasi</h3>
+                <p>Hitung nilai masa depan dengan kontribusi bulanan &amp; bunga berbunga.</p>
+            </article>
+            <article class="card">
+                <div class="icon">🧠</div>
+                <h3>Tips &amp; Literasi</h3>
+                <p>Pelajari konsep inti seperti darurat fund, inflasi, dan manajemen risiko</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="cta container" style="margin-top: 20px;">
+        <div class="cta-card">
+            <h2>Siap Memulai Perjalanan Finansialmu?</h2>
+            <p>masuk ke halaman edukasi untuk mencoba kalkulator dan materi interaktif.</p>
+            <a class="btn primary" href="education.html">Buka Halaman Edukasi</a>
+        </div>
+    </section>
+
+    <section id="faq" class="faq container">
+        <h2>Pernyataan Umum</h2>
+        <details>
+            <summary>Apakah Edukasi Ini Gratis?</summary>
+            <p>Ya. Semua materi disini gratis untuk dipelajari.</p>
+        </details>
+        <details>
+            <summary>Apakah data saya disimpan?</summary>
+            <p>Ya. Rencana anggaran disimpan de <em>localStorage</em> browser-mu dan tidak dikirim ke server.</p>
+        </details>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© <span id="year"></span> Blitz. Dibuat untuk edukasi finansial</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+    
+</body>
+</html>

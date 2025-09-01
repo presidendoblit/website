@@ -1,0 +1,170 @@
+:root{
+  --bg: #0b1220;
+  --card: #121a2b;
+  --muted: #9fb0d0;
+  --text: #e6eefc;
+  --accent: #68e1fd;
+  --primary: #5ad67d;
+  --ring: #2b344a;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  background: radial-gradient(1200px 800px at 10% -10%, #1b2540 0%, #0b1220 40%), var(--bg);
+  color: var(--text);
+  line-height:1.5;
+}
+
+
+.container{max-width: 1200px; margin: 0 auto; padding: 0 16px}
+
+.site-header{
+    position:sticky; top:0; z-index:50;
+    background: rgba(11,18,32,.8); backdrop-filter:blur(8px);
+    border-bottom:1px solid #1f2a44;
+}
+.nav{display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 12px}
+.brand{display: flex; align-items: center; gap: 10px; color:var(--text); text-decoration: none; font-weight: 700; letter-spacing: .3px}
+.brand svg{width: 28px; height: 28px; fill:var(--primary)}
+
+.nav-links{display: none; gap: 18px}
+.nav-links a{color:var(--muted) ; text-decoration: none; padding: 8px 10px; border-radius: 10px}
+.nav-links a:hover{background: rgba(104,225,253,.12); color: var(--text)}
+.menu-btn{appearance: none; border: 1px solid var(--ring); background: transparent; color: var(--text); padding: 8px 12px; border-radius: 10px}
+.menu-btn:focus{outline:2px solid var(--accent)}
+
+.hero{padding: 40px 0 24px; border-bottom: 1px solid #1f2a44}
+.hero-grid{display: grid; gap: 24px}
+.hero-copy h1{font-size: 32px; line-height: 1.2; margin: 0 0 12px}
+.hero-copy p{color: var(--muted); margin: 0 0 16px}
+.actions{display: flex; gap: 12px; flex-wrap: wrap}
+.btn{display: inline-block; padding: 10px 16px; border-radius: 12px; text-decoration: none; border: 1px solid var(--ring); color: var(--text)}
+.btn.primary{background:linear-gradient(90deg, var(--primary), #4bb16a); border: none; color: #08130d; font-weight: 700; cursor: pointer}
+.btn.ghost{background: transparent}
+.badges{display: flex; gap:12px; padding: 0; list-style: none; margin: 16px 0 0}
+.badges li{background: #0e1627; border: 1px solid #1f2a44; padding: 6px 10px; border-radius: 999px; color: var(--muted); font-size: 14px}
+
+.hero-card{
+  background: linear-gradient(180deg, rgba(104,225,253,.06), rgba(90,214,125,.08)), var(--card);
+  border: 1px solid #243252;
+  padding: 18px; border-radius: 16px;
+}
+
+.stat{display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px}
+.stat .label{color: var(--muted); font-size: 14px}
+.stat .value{font-weight: 700}
+.progress{height: 10px; background: #0e1627; border: 1px solid #243252; border-radius: 999px; overflow: hidden}
+.progress .bar{height: 100%; background: linear-gradient(90deg, var(--accent), var(--primary))}
+
+.features{padding: 32px 0}
+.features h2{margin:0 0 16px;font-size: 24px}
+.grid-3{display: grid; gap: 16px}
+.card{background: var(--card); border: 1px solid #243252; border-radius: 16px; padding: 16px}
+.card .icon{font-size: 28px}
+.card h3{margin: 8px 0}
+.card p{color: var(--muted)}
+
+.cta{padding: 16px 0 32px}
+.cta-card{background: linear-gradient(180deg, rgba(90,214,125,.08), rgba(104,225,253,.06)), var(--card); border: 1px solid #243252; border-radius: 16px; padding: 20px; text-align: center}
+
+.faq{padding: 8px 0 40px}
+.faq details{background: #0e1627; border: 1px solid #243252; border-radius: 12px; padding: 10px 12px; margin-bottom: 10px}
+
+.site-footer{border-top: 1px solid #1f2a44; padding: 18px 0; color: var(--muted); font-size: 14px}
+
+.edu{padding: 24px 0 40px}
+.notice{background: #0e1627; border: 1px solid #243252; border-radius: 14px; padding: 12px; color: var(--muted); margin-bottom: 16px}
+.grid-2{display: grid; gap:12px}
+.grid-2 label{display: grid; gap: 6px; font-weight: 600}
+.grid-2 input{padding: 10px 12px; border-radius: 10px; border: 1px solid #2a3a5f; background: #0b1220; color: var(--text)}
+.grid-2 .full{grid-column: 1/ -1; display: flex; gap: 10px; flex-wrap: wrap}
+.result{margin-top: 12px; background:#0e1627; border: 1px solid #243252; border-radius: 12px; padding: 12px}
+.table{margin-top: 12px; border: 1px solid #243252; border-radius: 12px; overflow: hidden}
+.table table{width: 100%; border-collapse: collapse}
+.table th, .table td{padding: 10px 12px; border-bottom: 1px solid #202a46; text-align: left}
+.table tr:last-child td{border-bottom: none}
+
+.container2{
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+.chart{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.bar{
+  width: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 12px;
+  color: white;
+  border-radius: 5px;
+  animation: grow 0.8s ease-in-out forwards, gradientMove 2s linear infinite;
+  background: linear-gradient(90deg, #38bdf8, #34d399);
+  background-size: 200% 200%;
+  opacity: 0.9;
+  transition: transform 0.6s ease, background 0.6s ease;
+  transform-origin: bottom;
+}
+
+@keyframes grow {
+  from {transform: scaleY(0);}
+  to {transform: scaleY(1);}
+}
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.h1 {height: 60px;}
+.h2 {height: 90px;}
+.h3 {height: 120px;}
+.h4 {height: 150px;}
+.h5 {height: 180px;}
+.h6 {height: 210px;}
+.h7 {height: 240px;}
+
+
+
+#budgetChart,
+#investChart {
+  width: 100% !important;
+  height: 350px !important;
+  display: block;
+}
+
+
+@media (min-width:480px){
+  .hero-copy h1{font-size: 36px}
+  .bar {width: 20px; font-size: 9px;}
+  .container2 {gap: 50px;}
+  .bar {width: 45px; font-size: 11px;}
+}
+@media (min-width:820px){
+  .nav-links{display:flex}
+  .menu-btn{display: none}
+  .hero-grid{grid-template-columns: 1.2fr .8fr; align-items: center}
+  .grid-3{grid-template-columns: repeat(3, 1fr)}
+  .grid-2{grid-template-columns: 1fr 1fr}
+  .features h2{font-size: 28px}
+  .hero{padding: 56px 0 32px}
+  .bar {width: 50px; font-size: 10px;}
+}
+@media (min-width:1024px ){
+  .hero-copy h1{font-size: 44px}
+  .container{padding: 0 24px}
+}
+@media (min-width:1440px){
+  .container{max-width: 1280px}
+}
+
+
